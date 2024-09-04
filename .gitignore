@@ -1,0 +1,4 @@
+./django-env/
+./firsttuto/db.sqlite3
+./firsttuto/__pycache__/
+*.sqlite3

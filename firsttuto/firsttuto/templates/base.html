@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>FirstTuto</title>
+  </head>
+  <body>
+    <header>
+      <h1>FirstTuto</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index/' %}">Home</a></li>
+        <li><a href="{% url 'login/' %}">Login</a></li>
+        <li><a href="{% url 'logout/' %}">Logout</a></li>
+        <li><a href="{% url 'register/' %}">Register</a></li>
+      </ul>
+    </nav>
+    <main>{% block content %} {% endblock %}</main>
+    <footer>
+      <p>&copy; 2024 FirstTuto</p>
+    </footer>
+  </body>
+</html>
