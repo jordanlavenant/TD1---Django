@@ -1,5 +1,5 @@
 """
-URL configuration for firsttuto project.
+URL configuration for GestionProduits project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,15 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-# from firsttuto.firsttuto import views
-# from views import IndexView, RegisterView, LogoutView, Login
+from django.urls import include, path
 
 urlpatterns = [
-    # path('index/', views.IndexView.as_view(), name='index'),
-    # path('login/', views.Login.as_view(), name='login'),
-    # path('logout/', LogoutView.as_view(), name='logout'),
-    # path("register/", views.RegisterView.as_view(), name="register"),
     path('admin/', admin.site.urls),
+    path("lesProduits/", include('LesProduits.urls'))
 ]

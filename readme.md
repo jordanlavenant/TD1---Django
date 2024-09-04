@@ -14,7 +14,7 @@ Deactivate it :
 ## Installation
 
 Install Django :  
- `pip install django`
+`pip install django`
 
 ## Start
 
