@@ -20,7 +20,27 @@ Install Django :
 
 Start the development server :
 
-```
-cd firsttuto
+```bash
+cd GestionTaches
 python3 manage.py runserver
+```
+
+## Migrations
+
+## Migrate
+
+Migrate the current models :
+
+```bash
+cd GestionTaches
+python3 manage.py migrate
+```
+
+## Create migration
+
+Make a new migration with the new model :
+
+```bash
+cd GestionTaches
+python3 manage.py makemigration
 ```

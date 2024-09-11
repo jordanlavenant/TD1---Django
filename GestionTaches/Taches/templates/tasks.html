@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore-start -->
+{% block title %} Tâches {% endblock %}
+<!-- prettier-ignore-end -->
+{% block styles %} {{ block.super }}
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous"
+/>
+{% endblock %} {% block content %}
+<h1>{{title}}</h1>
+
+{% for task in tasks %}
+<div class="row">
+  <div class="col">{{task.name}}</div>
+  <div class="col">{{task.created_date}}</div>
+  <div class="col">{{task.colored_due_date}}</div>
+  <div class="col">
+    {% if task.closed %}
+    <i class="fas fa-lock"></i>
+    {% else %}
+    <i class="fas fa-lock-open"></i>
+    {% endif %}
+  </div>
+</div>
+{% endfor %} {% endblock %}
