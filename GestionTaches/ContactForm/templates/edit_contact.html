@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% load static %}
+<!-- prettier-ignore-start -->
+{% block title %} Modifier le contact {% endblock %}
+<!-- prettier-ignore-end -->
+{% block content %}
+<!-- prettier-ignore-start -->
+{% if contact %}
+<!-- prettier-ignore-end -->
+<a href="{% url 'contact' contact.id %}">Retour au contact</a>
+<h2>Modifier le contact</h2>
+<form action="" method="POST">
+  {% csrf_token %} {{ form }}
+  <button type="submit">Sauvegarder</button>
+</form>
+{% endif %} {% endblock %}

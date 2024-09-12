@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% load static %}
+<!-- prettier-ignore-start -->
+{% block title %} Contacts {% endblock %}
+<!-- prettier-ignore-end -->
+{% block navtitle %} Contacts {% endblock %}
+<!-- prettier-ignore-start -->
+{% block content%}
+<ul>
+  {% for contact in contacts %}
+  <li>
+    <a href="{% url 'contact' contact.id %}">
+      {{ contact.name }} {{ contact.firstname }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'create_contact' %}">Ajouter un contact</a>
+{% endblock %}
+<!-- prettier-ignore-end -->

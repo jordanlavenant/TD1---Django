@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% load static %}
+<!-- prettier-ignore-start -->
+{% block title %} Nouveau Contact {% endblock %}
+<!-- prettier-ignore-end -->
+{% block navtitle %} Nouveau Contact {% endblock %} {% block content%}
+<form action="" method="POST">
+  {% csrf_token %} {{ form }}
+  <button type="submit">Sauvegarder</button>
+</form>
+{% endblock %}

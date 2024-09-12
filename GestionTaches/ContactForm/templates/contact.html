@@ -1,1 +1,17 @@
-{{ contact_form.as_p }}
+{% extends "base.html" %} {% load static %}
+<!-- prettier-ignore-start -->
+{% block title %} Détail du contact {% endblock %}
+<!-- prettier-ignore-end -->
+{% block content %}
+<a href="{% url 'contacts' %}">Retour à la liste des contacts</a>
+<h2>Détail du contact</h2>
+{% if pers %}
+<p>Nom : {{ pers.name }}</p>
+<p>Prénom : {{ pers.firstname }}</p>
+<p>Email : {{ pers.email }}</p>
+<p>Message : {{ pers.message }}</p>
+<a href="{% url 'edit_contact' pers.id %}">Modifier le contact</a>
+<a href="{% url 'delete_contact' pers.id %}">Supprimer le contact</a>
+{% else %}
+<p>Aucun contact trouvé.</p>
+{% endif %} {% endblock %}
